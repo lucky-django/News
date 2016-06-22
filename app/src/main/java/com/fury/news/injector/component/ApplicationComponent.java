@@ -1,8 +1,9 @@
 package com.fury.news.injector.component;
 
 import android.content.Context;
-import com.fury.news.KZApplication;
-import com.fury.news.api.account.AccountApi;
+import com.fury.news.NewsApplication;
+import com.fury.news.api.pic.PicApi;
+import com.fury.news.api.sports.SportsApi;
 import com.fury.news.injector.module.ApiModule;
 import com.fury.news.injector.module.ApplicationModule;
 import com.fury.news.utils.RxBus;
@@ -19,7 +20,9 @@ public interface ApplicationComponent {
 
   RxBus getBus();
 
-  AccountApi getAccountApi();
+  PicApi getPicApi();
 
-  void inject(KZApplication application);
+  SportsApi getSportsApi();
+
+  void inject(NewsApplication application);
 }

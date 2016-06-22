@@ -1,13 +1,15 @@
 package com.fury.news.ui;
 
-import android.app.Activity;
 import android.os.Bundle;
-import com.fury.news.AppManager;
+import android.support.v7.app.AppCompatActivity;
+import com.fury.news.NewsApplication;
+import com.fury.news.injector.component.ApplicationComponent;
+import com.fury.news.injector.module.ActivityModule;
 
 /**
  * Created by lucky-django on 16/6/8.
  */
-public abstract class BaseActivity extends Activity{
+public abstract class BaseActivity extends AppCompatActivity{
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -24,9 +26,12 @@ public abstract class BaseActivity extends Activity{
    */
   public abstract void initView();
 
-  @Override protected void onDestroy() {
-    super.onDestroy();
-    AppManager.getAppManager().finishActivity(this);
+  protected ApplicationComponent getApplicationComponent() {
+    return ((NewsApplication) getApplication()).mApplicationComponent;
+  }
+
+  protected ActivityModule getActivityModule() {
+    return new ActivityModule(this);
   }
 
 }

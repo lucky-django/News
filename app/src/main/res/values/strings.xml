@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KZApp</string>
+    <string name="app_name">News</string>
 
     <!-- SystemUtils -->
     <string name="provider_china_mobile">中国移动</string>
