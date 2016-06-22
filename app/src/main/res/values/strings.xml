@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KZApp</string>
+
+    <!-- SystemUtils -->
+    <string name="provider_china_mobile">中国移动</string>
+    <string name="provider_china_unicom">中国联通</string>
+    <string name="provider_china_telecom">中国电信</string>
+    <string name="provider_abroad">国外运营商</string>
+    <string name="provider_unknow">没有SIM卡</string>
+
+</resources>
