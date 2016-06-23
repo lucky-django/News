@@ -1,7 +1,7 @@
 package com.fury.news.utils;
 
 import android.util.Log;
-import com.sohu.kzapp.BuildConfig;
+import com.fury.news.BuildConfig;
 
 /**
  * Created by lucky-django on 16/6/8.

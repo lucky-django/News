@@ -17,7 +17,7 @@ import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.text.ClipboardManager;
 import android.util.TypedValue;
-import com.sohu.kzapp.R;
+import com.fury.news.R;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
