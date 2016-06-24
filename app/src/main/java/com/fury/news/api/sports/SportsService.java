@@ -9,7 +9,7 @@ import rx.Observable;
  * Created by lucky-django on 16/6/22.
  */
 public interface SportsService {
-
+  
   @GET("/txapi/tiyu/tiyu") Observable<SportsResult> getInfo(@Query("num") int num,
       @Query("page") int page);
 }

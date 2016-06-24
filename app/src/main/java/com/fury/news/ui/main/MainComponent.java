@@ -3,6 +3,7 @@ package com.fury.news.ui.main;
 import com.fury.news.injector.PerActivity;
 import com.fury.news.injector.component.ApplicationComponent;
 import com.fury.news.injector.module.ActivityModule;
+import com.fury.news.ui.sports.SportsFragment;
 import dagger.Component;
 
 /**
@@ -11,5 +12,5 @@ import dagger.Component;
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = { ActivityModule.class })
 public interface MainComponent {
-  void inject(MainActivity activity);
+  void inject(SportsFragment fragment);
 }
