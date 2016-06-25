@@ -9,5 +9,6 @@ import rx.Observable;
  */
 public interface PicService {
 
-  @GET("/txapi/mvtp/meinv") Observable<Object> getInfo(@Query("num") int num);
+  @GET("/txapi/tiyu/tiyu") Observable<Object> getInfo(@Query("num") int num,
+      @Query("page") int page);
 }

@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#22999999"
     android:orientation="vertical">
-  <android.support.v7.widget.RecyclerView
-      android:id="@+id/recycler"
+  <com.cjj.MaterialRefreshLayout
+      android:id="@+id/layout_refresh"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:scrollbars="none"/>
+      app:isLoadMore="true"
+      app:overlay="true"
+      app:wave_show="false">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+  </com.cjj.MaterialRefreshLayout>
 </LinearLayout>

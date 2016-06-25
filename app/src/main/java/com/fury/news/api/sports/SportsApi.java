@@ -13,7 +13,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by lucky-django on 16/6/22.
  */
-public class SportsApi extends BaseApi{
+public class SportsApi extends BaseApi {
 
   private SportsService mSportsService;
 
@@ -26,7 +26,7 @@ public class SportsApi extends BaseApi{
     mSportsService = retrofit.create(SportsService.class);
   }
 
-  public Observable<SportsResult> getInfo(int num,int page) {
-    return mSportsService.getInfo(num,page).subscribeOn(Schedulers.io());
+  public Observable<SportsResult> getInfo(int num, int page) {
+    return mSportsService.getInfo(num, page).subscribeOn(Schedulers.io());
   }
 }

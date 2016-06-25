@@ -25,7 +25,7 @@ public class PicApi extends BaseApi {
     mPicService = retrofit.create(PicService.class);
   }
 
-  public Observable<Object> getInfo(int num) {
-    return mPicService.getInfo(num).subscribeOn(Schedulers.io());
+  public Observable<Object> getInfo(int num, int page) {
+    return mPicService.getInfo(num, page).subscribeOn(Schedulers.io());
   }
 }

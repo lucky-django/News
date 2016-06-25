@@ -2,7 +2,9 @@ package com.fury.news.injector.module;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import com.fury.news.Constants;
 import com.fury.news.network.HttpLoggingInterceptor;
+import com.fury.news.network.OkHttpUtils;
 import com.fury.news.utils.RxBus;
 import dagger.Module;
 import dagger.Provides;
@@ -36,6 +38,7 @@ import okhttp3.OkHttpClient;
         new OkHttpClient.Builder().connectTimeout(20 * 1000, TimeUnit.MILLISECONDS)
             .readTimeout(20 * 1000, TimeUnit.MILLISECONDS);
     builder.addInterceptor(httpLoggingInterceptor);
+    OkHttpUtils.addHeader(builder, "apikey", Constants.BAIDU_KEY);
     return builder.build();
   }
 

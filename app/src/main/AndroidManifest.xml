@@ -3,6 +3,7 @@
     package="com.fury.news">
 
   <uses-permission android:name="android.permission.INTERNET"/>
+
   <application
       android:name=".NewsApplication"
       android:allowBackup="true"
@@ -10,6 +11,9 @@
       android:label="@string/app_name"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
+    <meta-data
+        android:name="com.fury.news.network.OkGlideModule"
+        android:value="GlideModule"/>
     <activity android:name=".ui.main.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>

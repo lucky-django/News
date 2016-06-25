@@ -11,7 +11,7 @@ public class SportsDetail {
 
   @SerializedName("title") public String newsTitle;
 
-  @SerializedName("origin") public String origin;
+  @SerializedName("description") public String origin;
 
   @SerializedName("picUrl") public String picUrl;
 

@@ -9,6 +9,7 @@ import com.fury.news.utils.SystemUtils;
 import com.fury.news.utils.ToastUtils;
 import com.squareup.leakcanary.LeakCanary;
 import javax.inject.Inject;
+import okhttp3.OkHttpClient;
 
 /**
  * Created by lucky-django on 16/6/8.
@@ -17,6 +18,7 @@ public class NewsApplication extends Application {
 
   public ApplicationComponent mApplicationComponent;
   @Inject public LayoutInflater mInflater;
+  @Inject public OkHttpClient mOkHttpClient;
 
   public static NewsApplication mInstance;
 
